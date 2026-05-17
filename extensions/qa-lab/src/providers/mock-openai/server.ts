@@ -1098,7 +1098,6 @@ function buildAssistantText(
     return "RECOVERED-SUBAGENT-OK";
   }
   if (
-    /subagent fanout synthesis check/i.test(allInputText) &&
     /Internal task completion event/i.test(allInputText) &&
     /fanout worker (?:alpha|beta)/i.test(allInputText)
   ) {
@@ -1580,7 +1579,6 @@ async function buildResponsesPayload(
     return buildAssistantEvents("");
   }
   if (
-    /subagent fanout synthesis check/i.test(allInputText) &&
     /Internal task completion event/i.test(allInputText) &&
     /fanout worker (?:alpha|beta)/i.test(allInputText)
   ) {
